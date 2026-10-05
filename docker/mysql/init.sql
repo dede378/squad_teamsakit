@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS products (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(120) NOT NULL,
+  price DECIMAL(10,2) NOT NULL
+);
+
+INSERT INTO products (name, price)
+SELECT * FROM (
+  SELECT 'Training Laptop', 899.00
+  UNION ALL SELECT 'Lab Keyboard', 79.00
+  UNION ALL SELECT 'Security Book', 49.00
+) AS seed
+WHERE NOT EXISTS (SELECT 1 FROM products);
