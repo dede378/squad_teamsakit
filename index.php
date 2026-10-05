@@ -10,6 +10,8 @@
 <li><a href="/labs/sqli/product.php?id=1">SQL Injection</a></li>
 <li><a href="/labs/auth/login.php">Authentication</a></li>
 <li><a href="/labs/idor/profile.php?id=1">IDOR / Access Control</a></li>
+<li><a href="/labs/access-control/admin.php">Authorization Challenge</a></li>
+<li><a href="/labs/csrf/email.php">CSRF</a></li>
 <li><a href="/labs/redirect/redirect.php?url=https://example.com">Open Redirect</a></li>
 <li><a href="/labs/parameters/params.php">Parameter Discovery</a></li>
 <li><a href="/labs/headers/headers.php">Security Headers</a></li>
