@@ -5,12 +5,12 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* \
     && docker-php-ext-install mysqli \
     && a2enmod rewrite headers \
-    && printf '%s\\n' \
+    && printf '%s\n' \
        'ServerTokens Prod' \
        'ServerSignature Off' \
        > /etc/apache2/conf-available/security.conf \
     && a2enconf security \
-    && printf '%s\\n' \
+    && printf '%s\n' \
        'display_errors=Off' \
        'display_startup_errors=Off' \
        'log_errors=On' \
