@@ -1,0 +1,18 @@
+id: teamsakit-security-headers
+
+info:
+  name: SQUAD TeamSakit Security Headers Lab
+  author: teamsakit
+  severity: info
+  description: Detects the intentionally labeled security-header training endpoint.
+  tags: teamsakit,headers,training
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/labs/headers/headers.php"
+    matchers:
+      - type: word
+        part: header
+        words:
+          - "X-Lab: TeamSakit-Public"
