@@ -1,6 +1,6 @@
 FROM php:8.4-apache
 
-RUN docker-php-ext-install mysqli \
+RUN apt-get update \n    && apt-get install -y --no-install-recommends apache2-utils \n    && rm -rf /var/lib/apt/lists/* \n    && docker-php-ext-install mysqli \
     && a2enmod rewrite headers \
     && printf '%s\n' \
        'ServerTokens Prod' \
@@ -19,6 +19,6 @@ RUN docker-php-ext-install mysqli \
 COPY index.php /var/www/html/index.php
 COPY labs/ /var/www/html/labs/
 
-RUN chown -R www-data:www-data /var/www/html
+COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh\nRUN chmod 0755 /usr/local/bin/entrypoint.sh \n    && chown -R www-data:www-data /var/www/html
 
-EXPOSE 80
+EXPOSE 80\n\nENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
