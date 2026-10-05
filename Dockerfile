@@ -1,13 +1,16 @@
 FROM php:8.4-apache
 
-RUN apt-get update \n    && apt-get install -y --no-install-recommends apache2-utils \n    && rm -rf /var/lib/apt/lists/* \n    && docker-php-ext-install mysqli \
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends apache2-utils \
+    && rm -rf /var/lib/apt/lists/* \
+    && docker-php-ext-install mysqli \
     && a2enmod rewrite headers \
-    && printf '%s\n' \
+    && printf '%s\\n' \
        'ServerTokens Prod' \
        'ServerSignature Off' \
        > /etc/apache2/conf-available/security.conf \
     && a2enconf security \
-    && printf '%s\n' \
+    && printf '%s\\n' \
        'display_errors=Off' \
        'display_startup_errors=Off' \
        'log_errors=On' \
@@ -19,6 +22,10 @@ RUN apt-get update \n    && apt-get install -y --no-install-recommends apache2-u
 COPY index.php /var/www/html/index.php
 COPY labs/ /var/www/html/labs/
 
-COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh\nRUN chmod 0755 /usr/local/bin/entrypoint.sh \n    && chown -R www-data:www-data /var/www/html
+COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod 0755 /usr/local/bin/entrypoint.sh \
+    && chown -R www-data:www-data /var/www/html
 
-EXPOSE 80\n\nENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+EXPOSE 80
+
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
