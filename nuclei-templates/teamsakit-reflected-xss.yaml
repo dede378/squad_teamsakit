@@ -1,0 +1,18 @@
+id: teamsakit-reflected-xss
+
+info:
+  name: SQUAD TeamSakit Reflected XSS Lab
+  author: teamsakit
+  severity: info
+  description: Detects the intentionally reflected q parameter in the training lab.
+  tags: teamsakit,xss,training
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/labs/xss/reflected.php?q=NUCLEI_TEAMSAKIT"
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "NUCLEI_TEAMSAKIT"
