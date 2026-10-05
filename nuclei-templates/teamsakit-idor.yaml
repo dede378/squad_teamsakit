@@ -1,0 +1,18 @@
+id: teamsakit-idor
+
+info:
+  name: SQUAD TeamSakit IDOR Lab
+  author: teamsakit
+  severity: info
+  description: Detects the intentionally vulnerable IDOR training endpoint after authentication.
+  tags: teamsakit,idor,access-control,training
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/labs/idor/profile.php?id=1"
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "IDOR / Broken Access Control Lab"
