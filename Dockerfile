@@ -20,6 +20,7 @@ RUN apt-get update \
        > /usr/local/etc/php/conf.d/99-lab-hardening.ini
 
 COPY index.php /var/www/html/index.php
+COPY assets/ /var/www/html/assets/
 COPY labs/ /var/www/html/labs/
 COPY labs-entrypoint.sh /usr/local/bin/labs-entrypoint.sh
 
