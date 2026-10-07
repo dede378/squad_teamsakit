@@ -53,7 +53,7 @@ a{color:inherit;text-decoration:none}.wrap{max-width:1200px;margin:auto;padding:
 <a class="card" href="/labs/sqli/product.php?id=1"><div class="cardtop"><span class="num">01</span><span class="status">● ONLINE</span></div><div class="cardbody"><h3>SQL Injection</h3><p>Parameter-based database injection challenge.</p><div class="difficulty">DIFFICULTY ★★☆☆☆</div><span class="start">START LAB →</span></div></a>
 <a class="card" href="/labs/xss/reflected.php?q=Koleksi"><div class="cardtop"><span class="num">02</span><span class="status">● ONLINE</span></div><div class="cardbody"><h3>Reflected XSS</h3><p>Test unsafe input reflection and output handling.</p><div class="difficulty">DIFFICULTY ★★☆☆☆</div><span class="start">START LAB →</span></div></a>
 <a class="card" href="/labs/idor/profile.php?id=1"><div class="cardtop"><span class="num">03</span><span class="status">● ONLINE</span></div><div class="cardbody"><h3>IDOR</h3><p>Explore broken object-level authorization.</p><div class="difficulty">DIFFICULTY ★★★☆☆</div><span class="start">START LAB →</span></div></a>
-<a class="card" href="/labs/redirect/redirect.php?url=https://example.com"><div class="cardtop"><span class="num">04</span><span class="status">● ONLINE</span></div><div class="cardbody"><h3>Open Redirect</h3><p>Analyze unsafe URL redirection behavior.</p><div class="difficulty">DIFFICULTY ★★☆☆☆</div><span class="start">START LAB →</span></div></a>
+<a class="card" href="/labs/redirect/redirect.php?url=https://example.com"><div class="cardtop"><span class="num">04</span><span class="status">● ONLINE</span></div><div class="cardbody"><h3>Open Redirect</h3><p>Analyze unsafe URL redirection behavior.</p><div class="difficulty">DIFFICULTY ★★☆☆☆</div><span class="start">START LAB →</span></div></a><a class="card" href="/labs/cve/path-traversal.php?file=welcome.txt"><div class="cardtop"><span class="num">05</span><span class="status">● ONLINE</span></div><div class="cardbody"><h3>CVE-Style Path Traversal</h3><p>Analyze unsafe file path construction and traversal.</p><div class="difficulty">DIFFICULTY ★★★☆☆</div><span class="start">START LAB →</span></div></a>
 </div>
 </section>
 
@@ -61,7 +61,7 @@ a{color:inherit;text-decoration:none}.wrap{max-width:1200px;margin:auto;padding:
 <div class="sectionhead"><div><div class="label">// OPERATIONS</div><h2>Lab Dashboard</h2></div></div>
 <div class="dashboard">
 <div class="panel"><div class="paneltitle"><span>SYSTEM STATUS</span><span class="online">LIVE</span></div>
-<div class="stats"><div class="stat"><strong>06</strong><span>ACTIVE LABS</span></div><div class="stat"><strong>04</strong><span>BEGINNER</span></div><div class="stat"><strong>02</strong><span>ADVANCED</span></div></div>
+<div class="stats"><div class="stat"><strong>07</strong><span>ACTIVE LABS</span></div><div class="stat"><strong>04</strong><span>BEGINNER</span></div><div class="stat"><strong>02</strong><span>ADVANCED</span></div></div>
 <div class="activity" style="margin-top:20px">
 <div>[22:41:03] <b>SESSION</b> initialized</div>
 <div>[22:41:07] <b>LAB</b> SQLi module accessed</div>
