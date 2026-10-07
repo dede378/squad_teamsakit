@@ -1,0 +1,4 @@
+TRAINING NOTE
+
+Path traversal happens when untrusted path components are accepted without proper validation.
+Mitigation: canonicalize the requested path and verify it remains inside the intended base directory, or use a strict allowlist.
