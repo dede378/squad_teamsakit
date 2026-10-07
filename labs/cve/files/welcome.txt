@@ -1,0 +1,4 @@
+SQUAD // CYBER LAB
+
+This is an intentionally exposed training file.
+The challenge is to understand how the application constructs file paths.
