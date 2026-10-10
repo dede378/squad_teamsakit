@@ -4,7 +4,8 @@ set -eu
 : "${LAB_USERNAME:?LAB_USERNAME environment variable is required}"
 : "${LAB_PASSWORD:?LAB_PASSWORD environment variable is required}"
 
-install -d -m 0750 /etc/apache2/auth
+# Apache runs as www-data and must be able to traverse this directory.
+install -d -o root -g root -m 0755 /etc/apache2/auth
 htpasswd -bc /etc/apache2/auth/.htpasswd "$LAB_USERNAME" "$LAB_PASSWORD" >/dev/null
 chown root:www-data /etc/apache2/auth/.htpasswd
 chmod 0640 /etc/apache2/auth/.htpasswd
